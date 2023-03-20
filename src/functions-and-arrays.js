@@ -104,13 +104,35 @@ function uniquifyArray(wordsUnique) {
 if(!wordsUnique.length){
   return null;
 }
-
+let uniqueArr=[];
+for (i=0; i<wordsUnique.length; i++){
+  if(uniqueArr.indexOf(wordsUnique[i])=== -1){
+    uniqueArr.push(wordsUnique[i])
+  }
 }
+return uniqueArr;
+}
+console.log(uniquifyArray(wordsUnique));
+
+
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
-function doesWordExist() {}
+function doesWordExist(wordsFind) {
+  if(!wordsFind.length){
+    return null;
+  }
+for(let i=0; i<wordsFind.length; i++){
+  if( wordsFind[i]=== 'machine' && '' ) {
+    return true;
+  } else if( wordsFind[i]=== 'machine'){
+    return true;
+  } else { return false}
+}
+}
 
+
+console.log(doesWordExist(wordsFind));
 
 
 // Iteration #7: Count repetition
@@ -178,4 +200,3 @@ if (typeof module !== 'undefined') {
     greatestProduct
   };
 }
-
